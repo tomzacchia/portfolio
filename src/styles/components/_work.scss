@@ -1,4 +1,5 @@
 @import "../utils/colors";
+@import "../utils/mixins";
 
 .work {
   padding: 1rem 0;
@@ -8,4 +9,45 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.work-title {
+  position: relative;
+  color: white;
+}
+
+$underline-length: 50px;
+
+.work-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  margin-left: -($underline-length)/2;
+  height: 6px;
+  width: 50px;
+  background-color: white;
+}
+
+.work-filters {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 768px;
+  color: white;
+}
+
+.work-filter-highlight {
+  background-color: $secondary;
+}
+
+.work-filters p {
+  padding: 6px 14px;
+}
+
+@include tablet {
+  .work-filters p {
+    padding: 6px 2rem;
+  }
 }

@@ -1,4 +1,4 @@
-@import '../utils/colors';
+@import "../utils/colors";
 
 .nav {
   padding: 0 2rem;
@@ -16,13 +16,13 @@
   letter-spacing: 8px;
 }
 
-.floating-icons {
+.floating-icon {
   padding: 1rem;
   position: fixed;
   bottom: 0;
 }
 
-.floating-icons .icon-container {
+.floating-icon .icon-container {
   padding: 12px;
   background-color: $secondary;
   border-radius: 50%;

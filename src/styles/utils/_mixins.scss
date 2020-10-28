@@ -1,0 +1,24 @@
+// breakpoints from bootstrap 4
+@mixin mobile {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1336) {
+    @content;
+  }
+}
