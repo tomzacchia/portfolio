@@ -1,6 +1,5 @@
 import "./styles/index.scss";
-
-import img from "./resources/diamon-clothing-desktop.png";
+import natours from "./resources/natours-api.png";
 
 //==================================== Typewritter
 const typwriter = new Typewriter("#intro-dynamic", {
@@ -50,3 +49,10 @@ const highlightTarget = function (target) {
   previousFilter = target;
   previousFilter.classList.add("work-filter-highlight");
 };
+
+//==================================== CARD
+const cards = document.querySelectorAll(".card-container");
+
+cards.forEach((card) => {
+  card.style.backgroundImage = `url(${natours})`;
+});

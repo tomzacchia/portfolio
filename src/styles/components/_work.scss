@@ -34,7 +34,7 @@ $underline-length: 50px;
   display: flex;
   justify-content: space-between;
   width: 90%;
-  max-width: 768px;
+  max-width: 1200px;
   color: white;
 }
 
@@ -46,6 +46,8 @@ $underline-length: 50px;
 .work-filter-highlight {
   background-color: $secondary;
 }
+
+// ===================================================== CALL TO ACTION
 
 @include tablet {
   .work-filters p {

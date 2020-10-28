@@ -1,0 +1,30 @@
+@import "../utils/colors";
+@import "../utils/mixins";
+
+.portfolio-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.card-container {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+}
+
+@include tablet {
+  .card-container {
+    width: 50%;
+  }
+}
+
+@include desktop {
+  .card-container {
+    width: 33.33%;
+  }
+}

@@ -2,7 +2,7 @@ $body-color: slateblue;
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -15,10 +15,11 @@ p {
   padding: 0;
 }
 
-@import './utils/colors';
-@import './utils/fonts';
+@import "./utils/colors";
+@import "./utils/fonts";
 
-@import './components/nav';
-@import './components/intro';
-@import './components/work';
-@import './components/footer';
+@import "./components/nav";
+@import "./components/intro";
+@import "./components/work";
+@import "./components//work-card";
+@import "./components/footer";
