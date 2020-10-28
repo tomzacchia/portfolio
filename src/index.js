@@ -2,21 +2,7 @@ import "./styles/index.scss";
 
 import img from "./resources/diamon-clothing-desktop.png";
 
-// Work scrolling
-const viewWorkElement = document.querySelector("#work-anchor");
-
-viewWorkElement.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  const cardContainer = document.querySelector(".work");
-
-  cardContainer.scrollIntoView({
-    behavior: "smooth",
-  });
-});
-
-// Typewritter
-
+//==================================== Typewritter
 const typwriter = new Typewriter("#intro-dynamic", {
   loop: false,
 });
@@ -33,3 +19,34 @@ typwriter
   .deleteChars(30)
   .typeString("Front End Developer")
   .start();
+
+//==================================== Work scrolling
+const viewWorkElement = document.querySelector("#work-anchor");
+
+viewWorkElement.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const cardContainer = document.querySelector(".work");
+
+  cardContainer.scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+//==================================== WORK FILTERS ANIMATION
+const filtersContainer = document.querySelector(".work-filters");
+let previousFilter;
+
+filtersContainer.addEventListener("click", function (event) {
+  let target = event.target;
+
+  highlightTarget(target);
+});
+
+const highlightTarget = function (target) {
+  if (previousFilter) {
+    previousFilter.classList.remove("work-filter-highlight");
+  }
+  previousFilter = target;
+  previousFilter.classList.add("work-filter-highlight");
+};

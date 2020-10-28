@@ -38,12 +38,13 @@ $underline-length: 50px;
   color: white;
 }
 
-.work-filter-highlight {
-  background-color: $secondary;
-}
-
 .work-filters p {
   padding: 6px 14px;
+  transition: background-color 600ms ease-in-out;
+}
+
+.work-filter-highlight {
+  background-color: $secondary;
 }
 
 @include tablet {
