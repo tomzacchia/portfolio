@@ -1,1 +1,11 @@
 @import "../utils/colors";
+
+.work {
+  padding: 1rem 0;
+  padding-top: 4rem;
+  min-height: 50vh;
+  background-color: #0c2449;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
