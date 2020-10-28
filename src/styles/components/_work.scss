@@ -47,8 +47,6 @@ $underline-length: 50px;
   background-color: $secondary;
 }
 
-// ===================================================== CALL TO ACTION
-
 @include tablet {
   .work-filters p {
     padding: 6px 2rem;

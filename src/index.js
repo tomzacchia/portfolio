@@ -34,12 +34,13 @@ viewWorkElement.addEventListener("click", (event) => {
 
 //==================================== WORK FILTERS ANIMATION
 const filtersContainer = document.querySelector(".work-filters");
-let previousFilter;
+const defaultFilter = document.querySelectorAll(".work-filters p")[0];
+let previousFilter = defaultFilter;
 
 filtersContainer.addEventListener("click", function (event) {
   let target = event.target;
 
-  highlightTarget(target);
+  if (target.closest("p")) highlightTarget(target);
 });
 
 const highlightTarget = function (target) {

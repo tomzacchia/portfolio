@@ -17,6 +17,65 @@
   background-position: center center;
 }
 
+.card-container-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: background-color 500ms ease-in-out;
+}
+
+.card-container-overlay .titles-container {
+  position: absolute;
+  top: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: top 600ms ease-in-out;
+}
+
+.titles-container h1 {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: $main;
+}
+
+.titles-container p {
+  color: $secondary;
+}
+
+.card-container-overlay .call-to-action {
+  position: absolute;
+  bottom: -100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  transition: bottom 600ms ease-in-out;
+  font-size: 2rem;
+}
+
+.call-to-action a:first-child {
+  margin-right: 2rem;
+}
+
+.call-to-action a:hover {
+  color: $secondary;
+}
+
+.card-container-overlay:hover {
+  background-color: white;
+}
+
+.card-container-overlay:hover .titles-container {
+  top: 50px;
+}
+
+.card-container-overlay:hover .call-to-action {
+  bottom: 75px;
+}
+
 @include tablet {
   .card-container {
     width: 50%;
