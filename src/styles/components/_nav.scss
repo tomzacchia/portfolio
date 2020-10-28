@@ -1,0 +1,29 @@
+@import '../utils/colors';
+
+.nav {
+  padding: 0 2rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav .name-container {
+  letter-spacing: 8px;
+}
+
+.floating-icons {
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+}
+
+.floating-icons .icon-container {
+  padding: 12px;
+  background-color: $secondary;
+  border-radius: 50%;
+}

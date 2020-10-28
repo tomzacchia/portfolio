@@ -1,0 +1,43 @@
+.text-xs {
+  font-size: .75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.text-2lg {
+  font-size: 1.75rem;
+}
+
+.text-xlg {
+  font-size: 2.25rem;
+}
+
+.text-2xlg {
+  font-size: 3rem;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-secondary {
+  color: $secondary;
+}
