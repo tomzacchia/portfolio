@@ -1,0 +1,30 @@
+.grow {
+  animation: grow 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+    transform-origin: center bottom;
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.shrink {
+  animation: shrink 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    transform-origin: 50% 0%;
+    display: none;
+  }
+}

@@ -2,8 +2,7 @@
 @import "../utils/mixins";
 
 .work {
-  padding: 1rem 0;
-  padding-top: 4rem;
+  padding: 4rem 0;
   min-height: 50vh;
   background-color: #0c2449;
   display: flex;
@@ -14,19 +13,20 @@
 .work-title {
   position: relative;
   color: white;
+  font-weight: 300;
 }
 
-$underline-length: 50px;
+$underline-length: 75px;
 
 .work-title::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -1rem;
+  bottom: -12px;
   margin-left: -($underline-length)/2;
-  height: 6px;
-  width: 50px;
-  background-color: white;
+  height: 3px;
+  width: $underline-length;
+  background-color: $secondary;
 }
 
 .work-filters {
@@ -36,6 +36,7 @@ $underline-length: 50px;
   width: 90%;
   max-width: 1200px;
   color: white;
+  cursor: pointer;
 }
 
 .work-filters p {

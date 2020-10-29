@@ -1,5 +1,8 @@
+import mixitUp from "mixitup";
+import projects from "./constants";
+require("./resources/favicon.png");
+
 import "./styles/index.scss";
-import natours from "./resources/natours-api.png";
 
 //==================================== Typewritter
 const typwriter = new Typewriter("#intro-dynamic", {
@@ -52,8 +55,33 @@ const highlightTarget = function (target) {
 };
 
 //==================================== CARD
-const cards = document.querySelectorAll(".card-container");
+const portfolioContainer = document.querySelector(".portfolio-container");
 
-cards.forEach((card) => {
-  card.style.backgroundImage = `url(${natours})`;
+projects.forEach((project) => {
+  let cardMarkup = `
+    <div class="mix card-container ${project.category}" style="background-image: url(${project.bgUrl})">
+      <div class="card-container-overlay">
+        <div class="titles-container">
+          <h1> ${project.title} </h1>
+          <p> ${project.subtitle} </p>
+        </div>
+        <div class="call-to-action">
+          <a
+            href="${project.demoURL}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fas fa-link"></i>
+          </a>
+          <a href="${project.githubURL}" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  portfolioContainer.insertAdjacentHTML("beforeend", cardMarkup);
 });
+
+const mixer = mixitUp(portfolioContainer);
