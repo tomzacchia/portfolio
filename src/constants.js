@@ -1,9 +1,9 @@
 import diamond from "./resources/diamon-clothing-desktop-min.png";
-import rockPaperScissors from "./resources/rock-paper-scissors-min.png";
+import sudoku from "./resources/sudoku_clone.png";
 import ipTracker from "./resources/ip-tracker-min.png";
 import natours from "./resources/natours-api-min.png";
 import forkiy from "./resources/forkify-desktop-min.png";
-import newsweek from "./resources/newsweek-desktop-min.png";
+import archStudio from "./resources/arch_studio.png";
 
 const PROJECTS = [
   {
@@ -15,12 +15,20 @@ const PROJECTS = [
     bgUrl: diamond,
   },
   {
-    category: "js",
-    title: "Rock Paper Scissors",
-    subtitle: "JS, SCSS, Webpack",
-    demoURL: "https://rock-paper-scissors.tomzacchia.vercel.app/",
-    githubURL: "https://github.com/tomzacchia/rock-paper-scissors",
-    bgUrl: rockPaperScissors,
+    category: "react",
+    title: "Sudoku.com Clone",
+    subtitle: "React JS, Material UI",
+    demoURL: "https://sudoku-clone.vercel.app/",
+    githubURL: "https://github.com/tomzacchia/sudoku-clone",
+    bgUrl: sudoku,
+  },
+  {
+    category: "all",
+    title: "Arch Studio",
+    subtitle: "SCSS, Responsive Design",
+    demoURL: "https://tomzacchia.github.io/arch-studios-ui/",
+    githubURL: "https://github.com/tomzacchia/arch-studios-ui",
+    bgUrl: archStudio,
   },
   {
     category: "js",
@@ -46,15 +54,6 @@ const PROJECTS = [
       "https://rawcdn.githack.com/tomzacchia/forkify/8f75d4d018c030c48ba0a2254e91364f141d7ffb/dist/index.html",
     githubURL: "https://github.com/tomzacchia/forkify",
     bgUrl: forkiy,
-  },
-  {
-    category: "all",
-    title: "Newsweek UI Clone",
-    subtitle: "SCSS, Responsive Design",
-    demoURL:
-      "https://raw.githack.com/tomzacchia/newsweek_ui_clone/dev/index.html",
-    githubURL: "https://github.com/tomzacchia/newsweek_ui_clone",
-    bgUrl: newsweek,
   },
 ];
 
