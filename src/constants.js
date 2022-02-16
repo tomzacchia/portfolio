@@ -25,9 +25,9 @@ const PROJECTS = [
   {
     category: "all",
     title: "Arch Studio",
-    subtitle: "SCSS, Responsive Design",
-    demoURL: "https://tomzacchia.github.io/arch-studios-ui/",
-    githubURL: "https://github.com/tomzacchia/arch-studios-ui",
+    subtitle: "SCSS, Responsive Design, Vite",
+    demoURL: "https://arch-studio-vite.vercel.app",
+    githubURL: "https://github.com/tomzacchia/arch-studio-vite/tree/master",
     bgUrl: archStudio,
   },
   {
