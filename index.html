@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio · Skills Constellation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Everything drawn (bg stars, trajectory, skill stars, tail, satellite) lives on this canvas -->
+  <canvas id="sky" aria-hidden="true"></canvas>
+
+  <!-- Skill labels are real DOM text (accessible, selectable, easy to restyle) -->
+  <div id="labels"></div>
+
+  <!-- Hero text (sits in the lower third, below the constellation) -->
+  <main class="hero">
+    <h1 class="hero-title">my software journey</h1>
+    <span class="hero-rule" aria-hidden="true"></span>
+    <p class="hero-subtitle">front-end to cloud, with the user at the center</p>
+    <p class="hero-meta">tom zacchia <span aria-hidden="true">·</span> Montreal, CA</p>
+  </main>
+
+  <!-- Settings button -->
+  <button id="settings-toggle" class="settings-toggle" aria-label="Open settings" aria-controls="settings" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+    </svg>
+  </button>
+
+  <!-- Settings side panel -->
+  <aside id="settings" class="settings-panel" aria-hidden="true" aria-label="Animation settings">
+    <header>
+      <h2>Settings</h2>
+      <button id="settings-close" class="icon-btn" aria-label="Close settings">&times;</button>
+    </header>
+
+    <div class="settings-body">
+      <div class="group-title">Background</div>
+
+      <label class="row">
+        <span class="row-head"><span>Star density</span><output for="starDensity"></output></span>
+        <input type="range" id="starDensity" min="0" max="200" step="5" />
+      </label>
+
+      <label class="row">
+        <span class="row-head"><span>Star opacity</span><output for="starOpacity"></output></span>
+        <input type="range" id="starOpacity" min="0.1" max="1" step="0.05" />
+      </label>
+
+      <div class="group-title">Satellite</div>
+
+      <label class="row">
+        <span class="row-head"><span>Tail speed</span><output for="tailSpeed"></output></span>
+        <input type="range" id="tailSpeed" min="0.2" max="4" step="0.1" />
+      </label>
+
+      <label class="row">
+        <span class="row-head"><span>Speed along trajectory</span><output for="satSpeed"></output></span>
+        <input type="range" id="satSpeed" min="40" max="500" step="10" />
+      </label>
+
+      <div class="group-title">Skill stars</div>
+
+      <label class="row">
+        <span class="row-head"><span>Glow intensity</span><output for="glowIntensity"></output></span>
+        <input type="range" id="glowIntensity" min="0.2" max="3" step="0.1" />
+      </label>
+
+      <label class="row">
+        <span class="row-head"><span>Glow duration</span><output for="glowDuration"></output></span>
+        <input type="range" id="glowDuration" min="0.3" max="5" step="0.1" />
+      </label>
+    </div>
+
+    <footer>
+      <button id="settings-reset" class="btn ghost">Reset</button>
+      <button id="settings-apply" class="btn primary">Apply</button>
+    </footer>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
